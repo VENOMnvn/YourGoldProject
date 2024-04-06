@@ -14,7 +14,7 @@ import dotenv from 'dotenv';
 import OpenAI from "openai";
 
 const openai = new OpenAI({
-  apiKey:"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"
+  apiKey:""
 });
 
 const embeddings = new HuggingFaceTransformersEmbeddings({
@@ -68,11 +68,7 @@ const queryController = async (query)=>{
   const prompt = `Answer ${query} with reference ${searchResult.description}`;
   console.log(prompt);
    
-  // const model = new ChatOpenAI({
-  //   openAIApiKey: "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",
-  //   modelName: "",
-  // });
-
+  
   // const response = await model.invoke(prompt);
 
   const response = await openai.chat.completions.create({
