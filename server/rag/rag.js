@@ -14,7 +14,6 @@ import dotenv from 'dotenv';
 import OpenAI from "openai";
 
 const openai = new OpenAI({
-  apiKey:""
 });
 
 const embeddings = new HuggingFaceTransformersEmbeddings({
