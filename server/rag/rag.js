@@ -69,7 +69,7 @@ const queryController = async (query)=>{
    
   
   // const response = await model.invoke(prompt);
-
+  
   const response = await openai.chat.completions.create({
     messages: prompt,
     model: "gpt-3.5-turbo-0125",
